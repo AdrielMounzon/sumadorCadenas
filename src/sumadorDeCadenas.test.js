@@ -29,7 +29,11 @@ describe("Sumador de Cadenas", () => {
     expect(sumarCadena("//[;] 6;7;4")).toEqual(17);
   });
 
-  it("Devuelve la suma de una cadena de números separados solo por un separador personalizado", () => {
+  it("Devuelve la suma de una cadena de números separados por un separador personalizado, comas y guiones", () => {
     expect(sumarCadena("//[;] 6,3-2;1")).toEqual(12);
+  });
+
+  it("Devuelve la suma de una cadena de números separados por un separador personalizado, comas y guiones ignorando los mayores a 1000", () => {
+    expect(sumarCadena("2, 3, 1002")).toEqual(5);
   });
 });

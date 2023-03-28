@@ -4,7 +4,11 @@ function convertirNumero(cadena)
   {
     return 0;
   }
-  return parseInt(cadena);
+  if(parseInt(cadena)<1000)
+  {
+    return parseInt(cadena);
+  }
+  return 0;
 }
 
 function sumarCadena(cadena)
