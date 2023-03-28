@@ -15,8 +15,8 @@ function sumarCadena(cadena)
   if(validarSeparador == "//[;] ")
   {
     let separador = validarSeparador[3];
-    let valores = cadena.substring(6);
-    listaNumeros = valores.split(separador);
+    cadena = cadena.substring(6);
+    cadena = cadena.replaceAll(separador, "-");
   }
   if(cadena.includes(",") && !(cadena.includes("-")))
   {

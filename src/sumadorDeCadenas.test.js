@@ -28,4 +28,8 @@ describe("Sumador de Cadenas", () => {
   it("Devuelve la suma de una cadena de números separados solo por un separador personalizado", () => {
     expect(sumarCadena("//[;] 6;7;4")).toEqual(17);
   });
+
+  it("Devuelve la suma de una cadena de números separados solo por un separador personalizado", () => {
+    expect(sumarCadena("//[;] 6,3-2;1")).toEqual(12);
+  });
 });
