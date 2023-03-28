@@ -4,7 +4,7 @@ function sumarCadena(cadena)
   {
     return 0;
   }
-  return 1;
+  return parseInt(cadena);
 }
 
 export default sumarCadena;
