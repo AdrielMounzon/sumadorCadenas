@@ -11,13 +11,14 @@ function sumarCadena(cadena)
 {
   let listaNumeros = cadena;
   let suma = 0;
-  if(cadena.includes(","))
+  if(cadena.includes(",") && !(cadena.includes("-")))
   {
-    listaNumeros = cadena.split(",")
+    listaNumeros = cadena.split(",");
   }
   else if(cadena.includes("-"))
   {
-    listaNumeros = cadena.split("-")
+    let cadenaModificada = cadena.replaceAll("-", ",");
+    listaNumeros = cadenaModificada.split(",");
   }
   for (let numero of listaNumeros)
   {
