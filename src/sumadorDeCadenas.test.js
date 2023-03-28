@@ -24,4 +24,8 @@ describe("Sumador de Cadenas", () => {
   it("Devuelve la suma de una cadena de números separados por guiones y comas", () => {
     expect(sumarCadena("1,2-3")).toEqual(6);
   });
+
+  it("Devuelve la suma de una cadena de números separados solo por un separador personalizado", () => {
+    expect(sumarCadena("//[;] 6;7;4")).toEqual(17);
+  });
 });

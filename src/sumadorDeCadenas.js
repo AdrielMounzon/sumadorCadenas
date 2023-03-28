@@ -11,6 +11,13 @@ function sumarCadena(cadena)
 {
   let listaNumeros = cadena;
   let suma = 0;
+  let validarSeparador = cadena.substring(0, 6);
+  if(validarSeparador == "//[;] ")
+  {
+    let separador = validarSeparador[3];
+    let valores = cadena.substring(6);
+    listaNumeros = valores.split(separador);
+  }
   if(cadena.includes(",") && !(cadena.includes("-")))
   {
     listaNumeros = cadena.split(",");
