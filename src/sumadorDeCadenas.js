@@ -9,8 +9,16 @@ function convertirNumero(cadena)
 
 function sumarCadena(cadena)
 {
-  let listaNumeros = cadena.split(",");
+  let listaNumeros = cadena;
   let suma = 0;
+  if(cadena.includes(","))
+  {
+    listaNumeros = cadena.split(",")
+  }
+  else if(cadena.includes("-"))
+  {
+    listaNumeros = cadena.split("-")
+  }
   for (let numero of listaNumeros)
   {
     suma+=convertirNumero(numero);
