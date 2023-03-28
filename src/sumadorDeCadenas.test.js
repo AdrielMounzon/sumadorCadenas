@@ -1,5 +1,7 @@
-describe("Prueba inicial correcta", () => {
-  it("Retorna true", () => {
-    expect(true).toEqual(true);
+import sumarCadena from "./sumadorDeCadenas";
+
+describe("Sumador de Cadenas", () => {
+  it("Devuelve 0 para una cadena vacía", () => {
+    expect(sumarCadena("")).toEqual(0);
   });
 });
